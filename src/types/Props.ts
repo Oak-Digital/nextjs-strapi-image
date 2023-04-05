@@ -1,11 +1,13 @@
-import { ISharedMetaSocial, ISharedSeo } from './generated';
+import { ImageProps } from 'next/image';
+import { IMedia } from './generated';
 
-export type SeoProps = {
-    seo: ISharedSeo;
-    strapiUrl?: string; // should not include /api
-};
+const nextStrapiImageOmitted = ['src', 'width', 'height', 'alt'] as const;
 
-export type MetaSocialProps = {
-    metaSocial: ISharedMetaSocial;
+type NextStrapiImageOmitted = (typeof nextStrapiImageOmitted)[number];
+
+export type NextStrapiImageProps = {
     strapiUrl?: string;
-};
+    fallbackSize?: boolean;
+    alt?: string;
+    media?: IMedia | null;
+} & Omit<ImageProps, NextStrapiImageOmitted>;

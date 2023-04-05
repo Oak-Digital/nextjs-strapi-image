@@ -1,8 +1,8 @@
 {
-    "name": "@oak-digital/nextjs-strapi-plugin-seo",
+    "name": "@oak-digital/nextjs-strapi-image",
     "private": false,
     "license": "MIT",
-    "version": "0.0.3",
+    "version": "0.0.0",
     "files": [
         "lib"
     ],
@@ -22,7 +22,7 @@
         "coverage": "vitest run --coverage"
     },
     "peerDependencies": {
-        "next": ">= 12 <= 13"
+        "next": "<= 13"
     },
     "devDependencies": {
         "@oak-digital/types-4-strapi-2": "^0.5.4",

@@ -1,8 +1,8 @@
+import { StrapiImage } from '@oak-digital/nextjs-strapi-image';
 import { fetchPage } from '@/lib/api';
 import { GetServerSideProps, GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { dehydrate, QueryClient, useQuery } from 'react-query';
-import { Seo } from '@oak-digital/nextjs-strapi-plugin-seo';
 
 const GenericPage: NextPage = () => {
     // fetch page from api
@@ -12,11 +12,10 @@ const GenericPage: NextPage = () => {
     const pageId = parseInt(pageIdExtracted ?? '0');
     const { data: pageData } = useQuery(['page', pageId], () => fetchPage(pageId));
 
-    const seo = pageData?.data?.attributes.seo;
     return (
         <div>
-            {seo && <Seo seo={seo} strapiUrl={process.env.NEXT_PUBLIC_STRAPI_ENDPOINT} />}
             <h1>{pageData?.data?.attributes.title}</h1>
+            <StrapiImage media={pageData?.data.attributes.image?.data} strapiUrl={process.env.NEXT_PUBLIC_STRAPI_ENDPOINT} />
         </div>
     );
 };
@@ -33,7 +32,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     const pageId = parseInt(Array.isArray(context.params.id) ? context.params.id?.[0] : context.params.id);
 
     await queryClient.prefetchQuery(['page', pageId], () => fetchPage(pageId));
-
+console.log(queryClient.getQueryData(['page', pageId]));
     if (!queryClient.getQueryData(['page', pageId])) {
         return {
             notFound: true,

@@ -9,9 +9,10 @@ Install all dependencies in both projects and start the servers.
 Strapi:
 
 ```
-$ pnpm install
-$ pnpm run build
-$ pnpm run develop
+$ cp .env.example .env
+$ npm install
+$ npm run build
+$ npm run develop
 ```
 
 After starting strapi, set up test pages with/without seo data
