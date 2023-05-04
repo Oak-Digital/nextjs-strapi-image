@@ -1,4 +1,4 @@
-# nextjs-strapi-plugin-seo example
+# nextjs-strapi-image example
 
 This directory is made to be able to test the library.
 

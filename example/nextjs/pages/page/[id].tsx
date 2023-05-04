@@ -16,6 +16,13 @@ const GenericPage: NextPage = () => {
         <div>
             <h1>{pageData?.data?.attributes.title}</h1>
             <StrapiImage media={pageData?.data.attributes.image?.data} strapiUrl={process.env.NEXT_PUBLIC_STRAPI_ENDPOINT} />
+            <div style={{
+                width: 50,
+                height: 50,
+                position: 'relative',
+            }}>
+                <StrapiImage media={pageData?.data.attributes.image?.data} strapiUrl={process.env.NEXT_PUBLIC_STRAPI_ENDPOINT} fill />
+            </div>
         </div>
     );
 };
