@@ -1,5 +1,14 @@
 {
     "name": "@oak-digital/nextjs-strapi-image",
+    "description": "Small wrapper for next/image, to easily populate strapi media attributes",
+    "keywords": [
+        "nextjs",
+        "next",
+        "strapi",
+        "image"
+    ],
+    "homepage": "https://github.com/Oak-Digital/nextjs-strapi-image",
+    "repository": "github:Oak-Digital/nextjs-strapi-image",
     "private": false,
     "license": "MIT",
     "version": "0.0.2",
@@ -22,7 +31,7 @@
         "coverage": "vitest run --coverage"
     },
     "peerDependencies": {
-        "next": ">= 13 <="
+        "next": ">= 13 <= 14.x"
     },
     "devDependencies": {
         "@oak-digital/types-4-strapi-2": "^0.5.4",
