@@ -85,7 +85,7 @@ Config example
 
 ```typescript
 // lib/config/strapi-image.ts
-import { NextStrapiImageProps } from '@oak-digital/next-strapi-image';
+import { NextStrapiImageProps } from '@oak-digital/nextjs-strapi-image';
 
 export const strapiImageConfig = {
     strapiUrl: process.env.NEXT_PUBLIC_STRAPI_URL,
