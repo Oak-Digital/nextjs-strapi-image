@@ -127,8 +127,6 @@ For testing purposes, there has been added an [`/example`](./example/) directory
 
 ## Publishing
 
-```bash
-pnpm version # patch | minor | major
-pnpm build
-pnpm publish
+```
+pnpm run release
 ```
