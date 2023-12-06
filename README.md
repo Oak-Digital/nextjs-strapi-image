@@ -50,7 +50,7 @@ Media data example:
 Basic usage
 
 ```tsx
-import { StrapiImage } from '@oak-digital/next-strapi-image';
+import { StrapiImage } from '@oak-digital/nextjs-strapi-image';
 
 const MyComponent = ({ media }) => {
     return (
@@ -72,7 +72,7 @@ Wrapper example
 
 ```tsx
 // components/MyImage.tsx
-import { NextStrapiImageProps, StrapiImage } from '@oak-digital/next-strapi-image';
+import { NextStrapiImageProps, StrapiImage } from '@oak-digital/nextjs-strapi-image';
 import { FC } from 'react';
 
 const MyImage: FC<Omit<NextStrapiImageProps, 'strapiUrl'>> = (props) => {
@@ -94,7 +94,7 @@ export const strapiImageConfig = {
 
 ```tsx
 // components/my-component.tsx
-import { StrapiImage } from '@oak-digital/next-strapi-image'
+import { StrapiImage } from '@oak-digital/nextjs-strapi-image'
 import { strapiImageConfig } from '../lib/config/strapi-image'
 
 const MyComponent = ({ media }) => {
