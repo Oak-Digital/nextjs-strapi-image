@@ -1,7 +1,7 @@
 import { ImageProps } from 'next/image';
 import { IMedia } from './generated';
 
-const nextStrapiImageOmitted = ['src', 'width', 'height', 'alt'] as const;
+const nextStrapiImageOmitted = ['src', 'alt'] as const;
 
 type NextStrapiImageOmitted = (typeof nextStrapiImageOmitted)[number];
 
