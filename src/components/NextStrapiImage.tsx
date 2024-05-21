@@ -11,7 +11,7 @@ const StrapiImage = forwardRef<HTMLImageElement, NextStrapiImageProps>(
         }
 
         const { url, alternativeText, width, height } = media.attributes;
-        const src = getStrapiMedia(media);
+        const src = getStrapiMedia(media, strapiUrl);
 
         if (!src) {
             return null;
